@@ -5,18 +5,44 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.File;
+import java.util.concurrent.TimeUnit;
 public class uploadDownload {
-@authourKrashna	
-	    public static void main(String[] args) {
+
+	    public static void main(String[] args) throws InterruptedException {
 
 	    	System.setProperty("webdriver.chrome.driver","C:\\Chromedriver\\chromedriver-win64\\chromedriver.exe");
 
 	        WebDriver driver = new ChromeDriver();
 
-	        driver.get("https://www.ilovepdf.com/pdf_to_jpg");
+//	        driver.get("https://www.ilovepdf.com/excel_to_pdf");
+//	        
+//	        driver.get("https://www.ilovepdf.com/png_to_pdf");
+//	        
+//	       driver.get("https://www.ilovepdf.com/pdf_to_jng");
+//	        
+	        driver.get("https://www.ilovepdf.com/word_to_pdf");
+	        
+	        driver.manage().window().maximize();
+	        
+	        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-	        WebElement test = driver.findElement(By.id("upload-button"));
-	        test.sendKeys(System.getProperty("user.dir"+"C:\\Users\\RK\\eclipse-workspace\\iLovePDF\\src\\main\\java\\iLovePDF\\EvilTester Testcases.xlsx"));
+//	        WebElement test = driver.findElement(By.xpath("//a[@id=\"pickfiles\"]"));
+//	        test.sendKeys(System.getProperty("user.dir"+"C:\\Users\\RK\\eclipse-workspace\\iLovePDF\\src\\main\\java\\iLovePDF\\EvilTester Testcases.xlsx"));
+
+	        
+//	        WebElement test = driver.findElement(By.xpath("//a[@id=\"pickfiles\"]"));
+//	        test.sendKeys(System.getProperty("user.dir"+"C:\Users\RK\eclipse-workspace\iLovePDF\src\main\java\iLovePDF\Diagram.png"));
+	        
+
+//	        WebElement test = driver.findElement(By.xpath("//a[@id=\"pickfiles\"]"));
+//	        test.sendKeys(System.getProperty("user.dir"+"C:\\Users\\RK\\eclipse-workspace\\iLovePDF\\src\\main\\java\\iLovePDF\\dummy-pdf_2.pdf"));
+
+//	        WebElement test = driver.findElement(By.xpath("//a[@id=\"pickfiles\"]"));
+//	        test.sendKeys(System.getProperty("user.dir"+"C:\\Users\\RK\\eclipse-workspace\\iLovePDF\\src\\main\\java\\iLovePDF\\dummy-pdf_2.docx"));
+
+	        WebElement test = driver.findElement(By.xpath("//a[@id=\"pickfiles\"]"));
+	        test.sendKeys(System.getProperty("user.dir"+"C:\\Users\\RK\\eclipse-workspace\\iLovePDF\\src\\main\\java\\iLovePDF\\dummy-pdf_2.docx"));
+
 
 	        try {
 	            Thread.sleep(10000); 
