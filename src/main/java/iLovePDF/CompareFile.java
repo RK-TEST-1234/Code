@@ -76,7 +76,7 @@ public class CompareFile {
 
 
      String sheet01= WorkbookFactory.create(file01).getSheet("Sheet1").getRow(1).getCell(0).getStringCellValue();
-    String sheet02= WorkbookFactory.create(file02).getSheet("Sheet1").getRow(2).getCell(0).getStringCellValue();
+     String sheet02= WorkbookFactory.create(file02).getSheet("Sheet1").getRow(2).getCell(0).getStringCellValue();
      String sheet03= WorkbookFactory.create(file03).getSheet("Sheet1").getRow(3).getCell(0).getStringCellValue();
      String sheet04= WorkbookFactory.create(file04).getSheet("Sheet1").getRow(4).getCell(0).getStringCellValue();
      String sheet05= WorkbookFactory.create(file05).getSheet("Sheet1").getRow(1).getCell(1).getStringCellValue();
